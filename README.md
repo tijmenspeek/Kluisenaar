@@ -44,3 +44,4 @@ Husarnet maakt een virtueel prive netwerk waar de raspberry pi en de esp32 in st
 ### Demo videos
 
 in de map de videos vind je twee videos. IMG_0714 laat de werking zien van het detecteren en IMG_0714 laat de werking zien van de copen commando in de bot.
+![IMG_0717](https://user-images.githubusercontent.com/25722871/215902090-9c156146-a009-493d-9600-1dd463a5704f.jpg)
