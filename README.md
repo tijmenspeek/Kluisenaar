@@ -17,7 +17,7 @@ Het beheren van de locker gaat om de volgende onderdelen:
 de Pipeline werkt als volgt:
 Discord(/open command) -> Husarnet(VPN) - > esp32(Open locker);
 en
-esp32(detecteerd ongeauthoriseerde openen van de locker) -> IFTTT(https request naar Discord) -> Discord(Stuurt bericht dat locker geopend is)
+esp32(detecteerd ongeautoriseerde openen van de locker) -> IFTTT(https request naar Discord) -> Discord(Stuurt bericht dat locker geopend is)
 
 
 ## Discord Bot
@@ -40,5 +40,5 @@ Om https(secure) te gebruiken moet je certeficaten over een weer sturen om je id
 Om deze reden heb ik IFTTT(if this than that) gebruikt om een bericht terug naar de server te sturen. ITFFF staat toe http te ontvangen en maakt er zelf https van.
 #### husarnet
 De raspberry pi staat bij mij thuis, De locker staat op school. Om zede twee met elkaar te laten communiceren heb ik husarnet gebruikt.
-Husarnet is een hele krachtige VPN die gebruikt maar van de ipv6 Holl punging technick. Dit maakt het mogelijk om zonder port forwarding de esp32 te berijken vanaf thuis.
-Husarnet maakt een vertueel prive netwerk waar de raspberry pi en de esp32 in staan. Doordat ze bijna in dit netwerk staan kan de http requests maken alsof je op je locale netwerk zit.
+Husarnet is een hele krachtige VPN die gebruikt maakt van de ipv6 Hole punching technick. Dit maakt het mogelijk om zonder port forwarding de esp32 te bereiken vanaf thuis.
+Husarnet maakt een virtueel prive netwerk waar de raspberry pi en de esp32 in staan. Doordat ze beide in dit netwerk staan kan je http requests maken alsof je op je locale netwerk zit.
