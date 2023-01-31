@@ -1,17 +1,15 @@
 # Kluisenaar
-manage locker via discord
-
 
 
 Deze repository bestaat uit twee onderdelen.
 het ene deel is een Discord bot, te vinden in de map "KluisenaarBot". Het andere deel is De module in de locker(esp32), Te vinden is de src (source) map
 
-Het doel van mijn IOT project is om midelware te maken om mijn locker te kunne beheren met discord.
+Het doel van mijn IOT project is om middelware te maken om mijn locker te kunnen beheren met discord.
 Het beheren van de locker gaat om de volgende onderdelen:
 
-1. In Discord moet er een bot komen die luistert naar het "/open" commando. als dit command is getypt door iemand die blij de locker mag, moet de locker openen.
+1. In Discord moet er een bot komen die luistert naar het "/open" commando. als dit command is getypt door iemand die bij de locker mag, moet de locker openen.
 
-2. Waarneer de Locker geopend word zonder dat dit de bedoeling is (Brute force), Moet de locker(esp32) een bericht terug kunnen sturen naar discord. Om aan te geven dat de locker onteautoriseerd geopend is.
+2. Waarneer de Locker geopend word zonder dat dit de bedoeling is (Brute force), Moet de locker(esp32) een bericht terug kunnen sturen naar discord. Om aan te geven dat de locker ongeautoriseerd geopend is.
 
 
 de Pipeline werkt als volgt:
@@ -22,8 +20,8 @@ esp32(detecteerd ongeautoriseerde openen van de locker) -> IFTTT(https request n
 
 ## Discord Bot
 Voor mijn IOT project heb ik een discord bot gemaakt. Deze bot is geschreven in java en draait op de raspberry pi. 
-De Bot is verandwoordelijk voor de communicatie tussen de gebruiker en de locker.
-Met een dsicordbot kan je commandos maken. Een van die comandos is "/open" waarneer de bot ziet dat dit getyped is, en het is getyped door een admin. dan zal de bot een verzoek sturen om de kluis te openen.
+De Bot is verantwoordelijk voor de communicatie tussen de gebruiker en de locker.
+Met een discord bot kan je commandos maken. Een van die commandos is "/open" waarneer de bot ziet dat dit getyped is, en het is getyped door een admin. dan zal de bot een verzoek sturen om de kluis te openen.
 
 ## De Locker(esp32)
 De locker zelf bevat een esp32. een esp32 is een microcontroller met wifi. Deze esp word gebruikt voor twee dingen. 
@@ -42,3 +40,7 @@ Om deze reden heb ik IFTTT(if this than that) gebruikt om een bericht terug naar
 De raspberry pi staat bij mij thuis, De locker staat op school. Om zede twee met elkaar te laten communiceren heb ik husarnet gebruikt.
 Husarnet is een hele krachtige VPN die gebruikt maakt van de ipv6 Hole punching technick. Dit maakt het mogelijk om zonder port forwarding de esp32 te bereiken vanaf thuis.
 Husarnet maakt een virtueel prive netwerk waar de raspberry pi en de esp32 in staan. Doordat ze beide in dit netwerk staan kan je http requests maken alsof je op je locale netwerk zit.
+
+### Demo videos
+
+in de map de videos vind je twee videos. IMG_0714 laat de werking zien van het detecteren en IMG_0714 laat de werking zien van de copen commando in de bot.
